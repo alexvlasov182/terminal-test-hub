@@ -38,7 +38,14 @@ COMMENT ON TABLE terminals IS 'Virtual POS-terminals for testing purposes';
 COMMENT ON TABLE jobs IS 'Tasks to run tests on terminals (e.g., pending, in_progress, completed, failed)';
 
 COMMENT ON COLUMN terminals.status IS "Status: idle(pending), running(running test), done(completed test), failed(error during test)";
-COMMENT ON COLUMN jobs.staus IS "Statuses: pending(in queue) running(test in progress), done(test completed), failed(error during test)";
+COMMENT ON COLUMN jobs.status IS "Statuses: pending(in queue) running(test in progress), done(test completed), failed(error during test)";
+COMMENT ON COLUMN jobs.types IS "Types of tests: nfc_test, chip_test, print_test, pin_test";
+
+-- Examples data for the development and testing
+-- INSERT INTO terminals (serial_number, status) VALUES
+-- ('TERM-001', 'idle'),
+-- ('TERM-002', 'offline'),
+-- ('TERM-003', 'running'),;
 
 
 
