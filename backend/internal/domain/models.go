@@ -74,3 +74,12 @@ const (
 	JobStatusDone    = "done"    // job completed successfully
 	JobStatusFailed  = "failed"  // job execution failed
 )
+
+// Types of tests,which can be run tests on Terminal
+const (
+	TestTypeNFC   = "nfc_test"
+	TestTypeChip  = "chip_test"
+	TestTypePrint = "print_test"
+	TestTypePIN   = "pin_test"
+	TestTypeConn  = "conn_test"
+)
